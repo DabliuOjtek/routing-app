@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <div class="col-1">
+    <h1>Welcome to my website</h1>
+    <p>Page created using the giphy api</p>
+    <p>You can search gifs and see the trending gifs</p>
+    <p>If you want random gif click button below</p>
+    <div class="center-button">
+      <button type="button" class="random-gif-button" (click)="onGetRandomGif()">Random gif</button>
+    </div>
+  </div>
+
+  <div class="col-2">
+    <a [href]="gif || WELCOME_IMG_URL" target="_blank">
+      <img class="first-img" [src]="gif || WELCOME_IMG_URL">
+    </a>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="content-container">
+  <div class="search-component">
+    <div class="search-component-input">
+      <input type="text" placeholder="search gif" (keyup.enter)="onGetGifsByPhrase()" [(ngModel)]="phrase">
+    </div>
+    <div class="search-component-button" (click)="onGetGifsByPhrase()">Search</div>
+  </div>
+  <div class="grid-container">
+    <div *ngFor="let gif of gifs.data">
+      <a [href]="gif.images.downsized.url" target="_blank">
+        <img [src]="gif.images.downsized.url">
+      </a>
+    </div>
+  </div>
+</div>

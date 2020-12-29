@@ -1,0 +1,7 @@
+<div class="grid-container">
+  <div *ngFor="let gif of gifs.data">
+    <a [href]="gif.images.downsized.url" target="_blank">
+      <img [src]="gif.images.downsized.url">
+    </a>
+  </div>
+</div>
